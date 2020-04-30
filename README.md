@@ -1,0 +1,2 @@
+# vagrant_wireguard
+vagrantの中にwireguardをインストールできます。
