@@ -9,3 +9,6 @@ fedora 32以降でないとwireguardが使えないため、システムをア�
 # dnf -y install wireguard-tools
 ```
 と実行してください。
+
+その後はwireguard公式の通りコマンドを打てば進みます。
+[Wiregurad quick start](https://www.wireguard.com/quickstart/)
