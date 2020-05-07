@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "generic/fedora31"
+  config.vm.box = "generic/fedora32"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -64,10 +64,7 @@ Vagrant.configure("2") do |config|
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-    dnf -y upgrade --refresh
-    dnf -y install dnf-plugin-system-upgrade
-    dnf system-upgrade download -y --releasever=32
-    dnf system-upgrade reboot
-    #dnf -y install wiregurad-tools
+    dnf -y upgrade
+    dnf -y install wireguard-tools
   SHELL
 end
